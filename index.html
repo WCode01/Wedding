@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:description" content="17 Қазан 2026 | 18:00 | «Ават» мейрамханасы">
+<meta property="og:image" content="https://github.com/WCode01/BauyrzhanAizhan.TOY/blob/main/assets/photos/1.jpg">
+<title>Батыржан &amp; Балғын — Тойға шақырту</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== ЭКРАН-КОНВЕРТ (ОТКРЫТИЕ ПРИГЛАШЕНИЯ) ===================== -->
+<section id="envelope-screen">
+  <div class="petals-bg" id="petalsIntro"></div>
+  <div class="envelope-wrap">
+    <div class="envelope" id="envelope">
+      <div class="envelope-flap"></div>
+      <div class="envelope-body">
+        <div class="seal">
+          <span class="seal-initials"><span data-name="groomInitial">Б</span>&amp;<span data-name="brideInitial">А</span></span>
+        </div>
+      </div>
+      <div class="card-peek">
+        <p class="peek-title">Той шақыру</p>
+        <p class="peek-names"><span data-name="groom">Батыржан</span> &amp; <span data-name="bride">Балғын</span></p>
+      </div>
+    </div>
+    <button id="openBtn" class="open-btn">Ашу үшін басыңыз ✦ Открыть приглашение</button>
+  </div>
+</section>
+
+<!-- ===================== ОСНОВНОЙ САЙТ ===================== -->
+<div id="site" class="hidden">
+
+  <div class="petals-bg" id="petalsMain"></div>
+
+  <button id="musicToggle" class="music-toggle" title="Музыка">
+    <span class="music-icon">♪</span>
+  </button>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="ornament-top" aria-hidden="true"></div>
+    <p class="hero-eyebrow reveal" data-anim="fade-down">Сіздерді ақ некеміздің куәсі болуға шақырамыз</p>
+    <h1 class="hero-names reveal" data-anim="fade-up">
+      <span data-name="groom">Батыржан</span>
+      <span class="amp">&amp;</span>
+      <span data-name="bride">Балғын</span>
+    </h1>
+    <p class="hero-sub reveal" data-anim="fade-up">Біздің үйлену тойымыз</p>
+    <div class="hero-date reveal" data-anim="fade-up">
+      <span data-field="dateText">17 Қазан 2026 жыл</span>
+    </div>
+    <div class="scroll-hint">
+      <span></span>
+      <p>төмен түсіңіз</p>
+    </div>
+  </header>
+
+  <!-- ОБРАЩЕНИЕ РОДИТЕЛЕЙ -->
+  <section class="section parents-section">
+    <div class="ornament-divider" aria-hidden="true">❧</div>
+    <p class="reveal" data-anim="fade-up">
+      Құрметті қонақтар! Сіздерді балаларымыз <br> <strong>Батыржан</strong>  мен <strong>Балғынның</strong> <br> үйлену тойына арналған салтанатты ақ дастарханымыздың қадірлі қонағы болуға шақырамыз.
+    </p>
+    <p class="footer-note">Той иелері</p>
+    <p class="footer-names"><span data-name="papa">Арнат</span> және <span data-name="mama">Майгуль</span></p>
+  </section>
+
+  <!-- ОБРАТНЫЙ ОТСЧЁТ -->
+  <section class="section countdown-section">
+    <h2 class="section-title reveal" data-anim="fade-up">Тойға дейін</h2>
+    <div class="countdown reveal" data-anim="fade-up">
+      <div class="count-box"><span id="cd-days">00</span><small>күн</small></div>
+      <div class="count-box"><span id="cd-hours">00</span><small>сағат</small></div>
+      <div class="count-box"><span id="cd-mins">00</span><small>минут</small></div>
+      <div class="count-box"><span id="cd-secs">00</span><small>секунд</small></div>
+    </div>
+  </section>
+
+  <!-- ДЕТАЛИ СОБЫТИЯ -->
+  <section class="section details-section">
+    <h2 class="section-title reveal" data-anim="fade-up">Той туралы ақпарат</h2>
+    <p class="details-intro reveal" data-anim="fade-up">Бұл ерекше кеште сіздермен бірге қуанышымызды бөлісіп, әдемі естеліктер қалдырғымыз келеді.</p>
+
+    <div class="details-grid">
+      <div class="detail-card reveal" data-anim="fade-up">
+        <div class="detail-icon">📅</div>
+        <h3>Күні</h3>
+        <p data-field="dateText">07 қыркүйек 2026 жыл</p>
+      </div>
+      <div class="detail-card reveal" data-anim="fade-up">
+        <div class="detail-icon">🕒</div>
+        <h3>Уақыты</h3>
+        <p data-field="timeText">18:00</p>
+      </div>
+      <div class="detail-card reveal" data-anim="fade-up">
+        
+        <div class="detail-icon">📍</div>
+        <h3>Мекен-жайы</h3>
+        <p data-field="venue">«Ават» мейрамханасы</p>
+        <p class="detail-address" data-field="address">​Улица Манат, 27​1-3 этаж Достык м-н, Ауэзовский район, Алматы</p>
+        <a href="#" id="mapLink" target="_blank" class="map-btn">Картаны ашу</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПРОГРАММА ДНЯ -->
+  <section class="section program-section">
+    <h2 class="section-title reveal" data-anim="fade-up">Күн тәртібі</h2>
+    <div class="timeline">
+      <div class="timeline-item reveal" data-anim="fade-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">18:00</div>
+        <div class="timeline-text">"Бет ашар" рәсімі </div>
+      </div>
+      <div class="timeline-item reveal" data-anim="fade-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">19:00</div>
+        <div class="timeline-text">Той рәсімінің басталуы</div>
+      </div>
+      <div class="timeline-item reveal" data-anim="fade-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">20:00</div>
+        <div class="timeline-text">Салтанатты кеш, би, тілектер</div>
+      </div>
+      <div class="timeline-item reveal" data-anim="fade-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">00:00</div>
+        <div class="timeline-text">Кештің аяқталуы</div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- RSVP -->
+ <section class="section rsvp-section">
+  <h2 class="section-title reveal" data-anim="fade-up">Қатысуыңызды растаңыз</h2>
+  <p class="rsvp-sub reveal" data-anim="fade-up">Тойымызға келетініңізді бізге хабарлаңызшы</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7s9gDeUHofodjVxEnzieR4kgKYCQ2yqkgyUklplyfCZ5eow/viewform?usp=publish-editor" target="_blank" rel="noopener" class="rsvp-form-link reveal" data-anim="fade-up">
+    Тіркелу формасын толтыру
+  </a>
+</section>
+
+  <footer class="footer">
+    <div class="ornament-divider" aria-hidden="true">❧</div>
+    <p class="footer-note">Сіздерді күтеміз!</p>
+  </footer>
+
+</div>
+
+<audio id="bgMusic" loop preload="none">
+  <source src="assets/audio/music.mp3" type="audio/mpeg">
+</audio>
+
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
